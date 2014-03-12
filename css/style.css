@@ -1,0 +1,308 @@
+
+
+/*     PAGE STYLE     */
+/*   COLOR: ------    */
+/*--------------------*/
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+	font-family: 'Roboto Condensed', sans-serif;
+	background: #fff;
+}
+em {
+	font-weight: 700;
+	font-size: 24px;
+}
+.test {
+	float: left;
+	position: relative;
+	width: 10%;
+	height: 20%;
+	text-align: center;
+	font-size: 13px;
+	overflow: hidden;
+	/*background: url(../images/grid.jpg);*/
+	background-position: 50% 50%;
+	background-size: cover;
+}
+.test img {
+	width: 100%;
+	height: 100%;
+}
+.holy_shit {
+	-webkit-animation: holyShit 0.2s infinite;
+}
+.test:nth-child(90) {
+	background: pink;
+}
+.over {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 1;
+	
+	/*background: rgba(26, 188, 156,0.9);*/
+}
+.under {
+	width: 100%;
+	height: 100%;
+}
+
+.enter_top {
+	opacity: 1;
+	top: 0;
+	-webkit-animation: enterTop 0.3s, flipInXb 0.7s; /* Safari and Chrome */
+	-webkit-backface-visibility: visible !important;
+	background: rgba(26, 188, 156,0.9);
+}
+.exit_top {
+	opacity: 1;
+	-webkit-animation: exitTop 0.7s, flipOutX 0.7s; /* Safari and Chrome */
+	-webkit-backface-visibility: visible !important;
+	background: rgba(52, 152, 219,0.9)
+}
+
+.enter_right {
+	opacity: 1;
+	top: 0;
+	-webkit-animation: enterRight 0.3s, flipInYb 0.7s; /* Safari and Chrome */
+	-webkit-backface-visibility: visible !important;
+	background: rgba(231, 76, 60,0.9);
+}
+.exit_right {
+	top: 0;
+	opacity: 1;
+	-webkit-animation: exitRight 0.7s, flipOutY 0.7s; /* Safari and Chrome */
+	-webkit-animation-fill-mode: forwards;
+	-webkit-backface-visibility: visible !important;
+	background: rgba(155, 89, 182,0.9);
+}
+
+.enter_bottom {
+	opacity: 1;
+	top: 0;
+	-webkit-animation: enterBottom 0.3s, flipInX 0.7s; /* Safari and Chrome */
+	-webkit-backface-visibility: visible !important;
+	background: rgba(241, 196, 15,0.9);
+}
+.exit_bottom {
+	opacity: 1;
+	-webkit-animation: exitBottom 0.7s, flipOutXb 0.7s; /* Safari and Chrome */
+	-webkit-backface-visibility: visible !important;
+	background: rgba(243, 156, 18,0.9);
+}
+
+.enter_left {
+	opacity: 1;
+	top: 0;
+	-webkit-animation: enterLeft 0.3s, flipInY 0.7s; /* Safari and Chrome */
+	-webkit-backface-visibility: visible !important;
+	background: rgba(46, 204, 113,0.9);
+}
+.exit_left {
+	opacity: 1;
+	top: 0;
+	-webkit-animation: exitLeft 0.7s, flipOutYb 0.7s; /* Safari and Chrome */
+	-webkit-animation-fill-mode: forwards;
+	-webkit-backface-visibility: visible !important;
+	background: rgba(41, 128, 185,0.9);
+}
+
+
+@-webkit-keyframes enterTop /* Safari and Chrome */
+{
+from {top: -100%;}
+to {top: 0;}
+}
+
+@-webkit-keyframes exitTop /* Safari and Chrome */
+{
+from {top: 0;}
+to {top: -100%;}
+}
+
+@-webkit-keyframes enterBottom /* Safari and Chrome */
+{
+from {top: 100%;}
+to {top: 0;}
+}
+
+@-webkit-keyframes exitBottom /* Safari and Chrome */
+{
+from {top: 0;}
+to {top: 100%;}
+}
+
+@-webkit-keyframes enterRight /* Safari and Chrome */
+{
+from {left: 100%;}
+to {left: 0;}
+}
+
+@-webkit-keyframes exitRight /* Safari and Chrome */
+{
+from {left: 0;}
+to {left: 100%;}
+}
+
+@-webkit-keyframes enterLeft /* Safari and Chrome */
+{
+from {left: -100%;}
+to {left: 0;}
+}
+
+@-webkit-keyframes exitLeft /* Safari and Chrome */
+{
+from {left: 0;}
+to {left: -100%;}
+}
+
+@-webkit-keyframes holyShit
+{
+	0%   {background: red;}
+	50%  {background: green;}
+	100%  {background: blue;}
+}
+
+
+
+@-webkit-keyframes flipInX {
+    0% {
+        -webkit-transform: perspective(50px) rotateX(90deg);
+        -webkit-transform-origin: 0% 50%;
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: perspective(50px) rotateX(0deg);
+        -webkit-transform-origin: 0% 50%;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes flipInXb {
+    0% {
+        -webkit-transform: perspective(50px) rotateX(-90deg);
+        -webkit-transform-origin: 0% 50%;
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: perspective(50px) rotateX(0deg);
+        -webkit-transform-origin: 0% 50%;
+        opacity: 1;
+    }
+}
+
+
+.flipInX {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flipInX;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flipInX;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flipInX;
+	backface-visibility: visible !important;
+	animation-name: flipInX;
+}
+@-webkit-keyframes flipOutX {
+    0% {
+        -webkit-transform: perspective(50px) rotateX(0deg);
+        -webkit-transform-origin: 0% 50%;
+        opacity: 1;
+    }
+	100% {
+        -webkit-transform: perspective(50px) rotateX(-90deg);
+        -webkit-transform-origin: 0% 50%;
+        opacity: 1;
+    }
+}
+@-webkit-keyframes flipOutXb {
+    0% {
+        -webkit-transform: perspective(50px) rotateX(0deg);
+        -webkit-transform-origin: 0% 50%;
+        opacity: 1;
+    }
+	100% {
+        -webkit-transform: perspective(50px) rotateX(90deg);
+        -webkit-transform-origin: 0% 50%;
+        opacity: 1;
+    }
+}
+
+
+
+.flipOutX {
+	-webkit-animation-name: flipOutX;
+	-webkit-backface-visibility: visible !important;
+	-moz-animation-name: flipOutX;
+	-moz-backface-visibility: visible !important;
+	-o-animation-name: flipOutX;
+	-o-backface-visibility: visible !important;
+	animation-name: flipOutX;
+	backface-visibility: visible !important;
+}
+@-webkit-keyframes flipInY {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(90deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: perspective(50px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes flipInYb {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(-90deg);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: perspective(50px) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+.flipInY {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flipInY;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flipInY;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flipInY;
+	backface-visibility: visible !important;
+	animation-name: flipInY;
+}
+@-webkit-keyframes flipOutY {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(0deg);
+        opacity: 1;
+    }
+	100% {
+        -webkit-transform: perspective(50px) rotateY(-90deg);
+        opacity: 1;
+    }
+}
+@-webkit-keyframes flipOutYb {
+    0% {
+        -webkit-transform: perspective(50px) rotateY(0deg);
+        opacity: 1;
+    }
+	100% {
+        -webkit-transform: perspective(50px) rotateY(90deg);
+        opacity: 1;
+    }
+}
+
+
+.flipOutY {
+	-webkit-backface-visibility: visible !important;
+	-webkit-animation-name: flipOutY;
+	-moz-backface-visibility: visible !important;
+	-moz-animation-name: flipOutY;
+	-o-backface-visibility: visible !important;
+	-o-animation-name: flipOutY;
+	backface-visibility: visible !important;
+	animation-name: flipOutY;
+}
